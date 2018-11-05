@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Love</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		header {
+			position: relative;
+			text-align: center;
+			margin: 100px 500px 30px;
+			background-color: yellow;
+			padding: 50px;
+			border-radius: 10px;
+			font-size: 24px;
+			color: #333;
+		}
+		nav {
+			position: relative;
+			margin: 0 500px;
+		}
+		
+		nav div {
+			width: 100px;
+			height: 50px;
+			border-radius: 10px;
+			line-height: 50px;
+			text-align: center;
+			font-size: 20px;
+			position: absolute;
+			cursor: pointer;
+		}
+
+		nav #wrap1 {
+			left: 0;
+			top: 0;
+			background-color: pink;
+		}
+
+		nav #wrap2 {
+			right: 0;
+			top: 0;
+			background-color: lightgreen;
+		}
+
+	</style>
+</head>
+<body>
+	<header>做我女朋友好吗？</header>
+	<nav>
+		<div id="wrap1">同意</div>
+		<div id="wrap2">不行</div>
+	</nav>
+	<script>
+		function getRandom(){
+			var num = Math.random()*500;
+			return num;
+		}
+		document.getElementById("wrap1").onclick = function(){
+			alert("就知道你会答应！")
+		};
+		document.getElementById("wrap2").onmouseover = function(){
+			this.style.left = Math.random()*500+"px";
+			this.style.top = Math.random()*200+"px";
+			console.log(this.offsetLeft, this.offsetTop);
+			console.dir(this);
+		}
+	</script>
+</body>
+</html>
